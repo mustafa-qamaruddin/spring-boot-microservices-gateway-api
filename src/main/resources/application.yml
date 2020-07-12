@@ -16,9 +16,15 @@ zuul:
         stats:
             path: /stats/**
             url: http://localhost:8081/stats
-endpoints:
-    trace:
-        sensitive: false
+management:
+    endpoints:
+        web:
+            exposure:
+                include: routes,filters
+    endpoint:
+        health:
+            show-details: always
+            enabled: true
 ribbon:
     eureka:
         enabled: false
