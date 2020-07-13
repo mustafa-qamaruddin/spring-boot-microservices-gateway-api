@@ -58,8 +58,8 @@ public class HystrixFallbackConfiguration {
                         headers.setAccessControlAllowOrigin("*");
 						return headers;
 					}
-                }
+                };
             }
-        }
+        };
     }
 }
